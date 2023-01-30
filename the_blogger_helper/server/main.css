@@ -1,0 +1,341 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald&subset=latin,latin-ext);
+
+:root {
+   --content-color: #333333;
+   --ribbon-color-main: hsl(71, 65%, 48%); /* hsl(61, 95%, 50%); */ /* #adca2b; */
+   --h:71;  /*the initial hue*/
+   --s:65%; /*the initial saturation*/ 
+   --l:48%; /*the initial lightness*/
+   --ribbon-color-secondary: hsl(var(--h),var(--s),calc(var(--l) - 10%));
+   --ribbon-color-darkest: hsl(var(--h),var(--s),calc(var(--l) - 20%));
+}
+
+/* BEGIN styling the Ribbon region */
+.ribbon {
+   width: 285px;   
+   height: 80px;
+   float: right;
+   z-index: 999;
+   position: fixed;
+   top: 14px;
+   right: 20px;
+   background: var(--ribbon-color-main);
+   padding: 1em 2em; /* Adjust to suit */
+   margin: 2em -1rem 3em -2em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+   box-shadow: 0px 4px 4px -3px grey;
+   -webkit-transform: rotate(-1deg);
+   -moz-transform:    rotate(-1deg);
+   -ms-transform:     rotate(-1deg);
+   -o-transform:      rotate(-1deg);
+   transform:         rotate(-1deg);
+   -webkit-backface-visibility: hidden;
+}
+
+.ribbon:before {
+    content: "";
+    position: absolute;
+    rotate: 90deg;
+    z-index: 2;
+    left: -64px;
+    bottom: 7px;
+    /* box-shadow: 2px -3px 3px -1px grey; */
+    border-top: 65px solid var(--ribbon-color-secondary);
+    border-left: 38px solid var(--ribbon-color-secondary);
+    border-right: 38px solid var(--ribbon-color-secondary);
+    border-bottom: 25px solid transparent;
+}
+
+.ribbon:after {
+    content: "";
+    position: absolute;
+    rotate: -90deg;
+    z-index: 2;
+    left: 2px;
+    bottom: -3px;
+    /* box-shadow: 2px -3px 3px -1px grey; */
+    border-top: -26px solid var(--ribbon-color-darkest);
+    /* border-left: 15px solid var(--ribbon-color-secondary); */
+    border-right: 15px solid var(--ribbon-color-darkest);
+    border-bottom: 20px solid transparent;}
+
+.ribbon-content {
+   font-size: 22pt !important;
+   font-family: 'Oswald', Helvetica, Helvetica Neue, Arial, Sans-Serif;
+   text-transform: uppercase;
+   color: var(--content-color);
+   text-align: left;
+   width: 270px;
+   height: 70px;
+   margin-top: -8px;
+   position: relative;
+}
+
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+   content: "";
+   position: absolute;
+   margin-top: -10px;
+   display: inline-block;
+   border-style: solid;
+   border-color: var(--ribbon-color-darkest);
+   bottom: -1.75em;
+   z-index: -1;
+   width: 100%;
+}
+.ribbon .ribbon-content:before {
+   left: -2%;
+   top: 14%;
+   border-width: 11px;
+   width: 100%;
+   height: 90%;
+   content: " ";
+   color: var(--ribbon-color-main);
+   font-size: 18pt; 
+   background-color: var(--ribbon-color-darkest);
+   font-family: 'Oswald', Helvetica, Helvetica Neue, Arial, sans-serif;
+   text-align: left;
+   display: block;
+   /* box-shadow: 0px 4px 3px -4px grey; */
+}
+
+.ribbon .ribbon-content .blog_title {
+   font-size: 14px;
+   position: relative;
+   top: -7px;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   width: 86%;
+   display: block;
+   color: var(--content-color);
+}
+
+.ribbon a {
+   color: var(--ribbon-color-main);
+}
+
+.ribbon .ribbon-content:after {
+   right: 0;
+   border-width: 0;
+}
+
+.ribbon:hover .ribbon-content .blog_title {
+   white-space: normal;
+   transition: all .5s ease-in-out;
+}
+
+.ribbon:hover .ribbon-content:before {
+   height: auto;
+   transition: all .5s ease-in-out;
+}
+/* END styling the Ribbon region */
+
+/* BEGIN styling the Card region */
+.article-card {
+    background: #fff;
+    color: var(--ribbon-color-main);
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    -webkit-filter: drop-shadow(0 5px 15px rgba(0,0,0,.24));
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,.24));
+    display: flex;
+    flex-direction: column
+}
+
+.article-card .breadcrumbs .breadcrumb_last,.article-card h1,.article-card h2,.breadcrumbs .article-card .breadcrumb_last {
+    color: var(--ribbon-color-main);
+}
+
+.article-card .card-content {
+   color: var(--content-color);
+   width: 90%;
+   text-align: justify;
+}
+
+.article-card.article-card-large {
+    display: grid;
+    grid-template-columns: 50% 50%
+}
+
+.article-thumbnail-wrap {
+    position: relative
+}
+
+.article-card-large .article-thumbnail-wrap {
+    height: 100%
+}
+
+.article-card-large .article-thumbnail-wrap:after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    z-index: 3;
+    left: 75%;
+    height: 100%;
+    top: 0;
+    width: 50%;
+    background: linear-gradient(90deg,hsla(0,0%,100%,0) 0,hsla(0,0%,100%,.013) 8.1%,hsla(0,0%,100%,.049) 15.5%,hsla(0,0%,100%,.104) 22.5%,hsla(0,0%,100%,.175) 29%,hsla(0,0%,100%,.259) 35.3%,hsla(0,0%,100%,.352) 41.2%,hsla(0,0%,100%,.45) 47.1%,hsla(0,0%,100%,.55) 52.9%,hsla(0,0%,100%,.648) 58.8%,hsla(0,0%,100%,.741) 64.7%,hsla(0,0%,100%,.825) 71%,hsla(0,0%,100%,.896) 77.5%,hsla(0,0%,100%,.951) 84.5%,hsla(0,0%,100%,.987) 91.9%,#fff)
+}
+
+.article-card-large .article-thumbnail-wrap:before {
+    pointer-events: none;
+    content: "";
+    /* background: linear-gradient(130deg,#ff7a18,#af002d 41.07%,#319197 76.05%); */
+    background: linear-gradient(130deg, var(--ribbon-color-main), var(--ribbon-color-secondary) 70.07%, var(--content-color) 90.05%);
+    position: absolute;
+    mix-blend-mode: screen;
+    opacity: .75;
+    width: 120%;
+    min-height: 500px;
+    height: 100%;
+    z-index: 2
+}
+
+.article-thumbnail-wrap a:focus,.article-thumbnail-wrap a:hover {
+    opacity: 1
+}
+
+.article-thumbnail-wrap:after {
+    pointer-events: none;
+    content: "";
+    height: 250px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    /* background: linear-gradient(130deg,#ff7a18,#af002d 41.07%,#319197 76.05%); */
+    background: linear-gradient(130deg, var(--ribbon-color-main), var(--ribbon-color-secondary) 70.07%, var(--content-color) 90.05%);
+    mix-blend-mode: screen;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+img.article-thumbnail {
+    height: 250px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    display: block;
+}
+
+.article-card-large img.article-thumbnail {
+    position: absolute;
+    max-width: none;
+    width: 120%;
+    height: 100%
+}
+
+@media (max-height: 700px) {
+    img.article-thumbnail {
+        height:150px
+    }
+}
+
+@media (max-width: 800px) {
+    .article-card-large img.article-thumbnail {
+        position:relative;
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+        max-height: 200px
+   }
+
+   .article-card-large .article-thumbnail-wrap:after {
+        display:none;
+   }
+
+   .article-card.article-card-large {
+        grid-template-columns:1fr;
+   }
+
+   .article-card-large .article-article {
+        padding:1.5rem;
+   }
+
+    .article-card .card-content {
+      width: 95%;
+   }
+}
+
+.article-article {
+    flex: 1;
+    position: relative;
+    z-index: 5;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--ribbon-color-main);
+}
+
+.article-article h2 {
+   font-family: 'Oswald', Helvetica, Helvetica Neue, Arial, Sans-Serif;
+   font-size: 18pt !important;
+   line-height: 1.1em;
+   text-transform: uppercase;
+   margin: 0px 0px 0px 0px;
+}
+
+.article-article h2 a {
+   color: var(--content-color);
+}
+
+.article-card-large .article-article {
+    padding: 3rem;
+}
+
+.article-card-large .card-content {
+    font-size: 1.2rem;
+    color: var(--content-color);
+}
+
+.card-content ol,.card-content ul {
+    margin: 0 0 1.5rem 1.25rem
+}
+
+.card-content blockquote {
+    padding-left: 1.5rem
+}
+
+.author-row {
+    -webkit-margin-before: auto;
+    margin-block-start:auto;display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: .5rem;
+    align-items: center;
+    color: var(--content-color);
+    line-height: 1.3;
+    padding-top: .5rem;
+    float: right;
+    font-weight: 300;
+}
+
+.author-row>div>* {
+    white-space: nowrap
+}
+
+.newsletter-card-grid .author-row {
+    display: block
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: .5rem
+}
+
+.author-name {
+    font-weight: 700;
+    color: #000
+}
+
+.screen-reader,.screen-reader-text {
+    position: absolute!important;
+    clip: rect(1px,1px,1px,1px);
+    width: 1px;
+    height: 1px;
+    overflow: hidden
+}
+/* END styling the Card region */
