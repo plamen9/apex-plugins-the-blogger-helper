@@ -64,7 +64,7 @@ wwv_flow_imp_shared.create_plugin(
 '',
 '  License: MIT',
 '',
-'  GitHub:   https://github.com/plamen9/apex_plugins/the_blogger_helper',
+'  GitHub:   https://github.com/plamen9/apex_plugins',
 '  Blog:     https://plamen9.hashnode.dev/',
 '  Website:  https://apexapplab.dev/ ',
 '',
