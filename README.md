@@ -14,3 +14,6 @@
 - After installing the plugin, create a new Region in the Body position of your page. Set the Region "Template" option (under "Appearance") to `Blank with Attributes`.
 - Set the desired configuration attributes in the Region Attributes tab and save.
 - While your application is open, use `setPrimaryColour("#b3840e")` in you browser Dev Tools Console to try out new colours for your plugin. Just replace the default colour HEX value with your own. You can later use it in the Plugin Settings as a permanent one.
+
+## Preview
+![Ribbon and Card styles of the plugin](https://github.com/plamen9/apex-plugins-the-blogger-helper/blob/main/demo_2.jpg "Ribbon and Card styles of the plugin")
