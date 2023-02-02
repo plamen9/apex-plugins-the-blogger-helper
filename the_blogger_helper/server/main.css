@@ -31,6 +31,26 @@
    -webkit-backface-visibility: hidden;
 }
 
+@media (max-width: 700px) {
+   .ribbon { 
+      right: -285px;
+   }
+
+   .ribbon:hover { 
+      right: 20px;
+   }
+
+   .ribbon:hover .ribbon-content:before {
+      height: 90% !important;
+      transition: all .5s ease-in-out;
+   }
+
+   .ribbon:hover .ribbon-content .blog_title {
+      white-space: nowrap !important;
+      transition: all .5s ease-in-out;
+   }
+}
+
 .ribbon:before {
     content: "";
     position: absolute;
