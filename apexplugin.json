@@ -3,9 +3,9 @@
     "version": "1.0",
     "description": "A region type plugin which generates a link to your blog posts. Could be used as a fixed to the page ribbon on top or as a card with image, heading and description. Specify Blank with Attributes as region template for best results.",
     "keywords": ["blog", "helper", "link", "region"],
-    "homepage": "https://github.com/plamen9/apex_plugins/tree/main/the_blogger_helper",
+    "homepage": "https://github.com/plamen9/apex-plugins-the-blogger-helper",
     "bugs": {
-        "url": "https://github.com/plamen9/apex_plugins/issues",
+        "url": "https://github.com/plamen9/apex-plugins-the-blogger-helper/issues",
         "email": "pmushkov@yahoo.com"
     },
     "license": "MIT",
@@ -17,7 +17,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/plamen9/apex_plugins.git"
+        "url": "https://github.com/plamen9/apex-plugins-the-blogger-helper.git"
     },
     "oracle": {
         "versions": ["19.0.0.0"],
@@ -27,7 +27,7 @@
                 "internalName": "REGION.MYCOMPANY.BLOGGER_HELPER",
                 "type": "region",
                 "demo": "https://apex.oracle.com/pls/apex/r/gamma_dev/demo/charts",
-                "previewImage": "https://github.com/plamen9/apex_plugins/blob/main/the_blogger_helper/demo_2.jpg"
+                "previewImage": "https://github.com/plamen9/apex-plugins-the-blogger-helper/blob/main/demo_2.jpg"
             }
         }
     }
