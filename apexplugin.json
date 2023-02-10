@@ -22,12 +22,12 @@
     "oracle": {
         "versions": ["19.0.0.0"],
         "apex": {
-            "versions": ["22.2.0"],
+            "versions": ["20.2.0", "21.0.0", "21.1.0", "21.2.0", "22.0.0", "22.1.0", "22.2.0"],
             "plugin": {
                 "internalName": "REGION.MYCOMPANY.BLOGGER_HELPER",
                 "type": "region",
                 "demo": "https://apex.oracle.com/pls/apex/r/gamma_dev/demo/charts",
-                "previewImage": "https://github.com/plamen9/apex-plugins-the-blogger-helper/blob/main/demo_2.jpg"
+                "previewImage": "https://raw.githubusercontent.com/plamen9/apex-plugins-the-blogger-helper/main/demo_2.jpg"
             }
         }
     }

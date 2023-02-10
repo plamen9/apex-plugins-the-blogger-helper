@@ -20,8 +20,8 @@
    top: 14px;
    right: 20px;
    background: var(--ribbon-color-main);
-   padding: 1em 2em; /* Adjust to suit */
-   margin: 2em -1rem 3em -2em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+   padding: 15px 30px; /* Adjust to suit */
+   margin: 30px -15px 45px -30px; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
    box-shadow: 0px 4px 4px -3px grey;
    -webkit-transform: rotate(-1deg);
    -moz-transform:    rotate(-1deg);
@@ -129,8 +129,13 @@
    color: var(--content-color);
 }
 
-.ribbon a {
-   color: var(--ribbon-color-main);
+.ribbon a,
+.ribbon a:link,
+.ribbon a:visited,
+.ribbon a:hover,
+.ribbon a:active {
+  text-decoration: none;
+  color: var(--ribbon-color-main);
 }
 
 .ribbon .ribbon-content:after {
