@@ -16,4 +16,6 @@
 - While your application is open, use `setPrimaryColour("#b3840e")` in you browser Dev Tools Console to try out new colours for your plugin. Just replace the default colour HEX value with your own. You can later use it in the Plugin Settings as a permanent one.
 
 ## Preview
+![Ribbon tyles of the plugin](https://github.com/plamen9/apex-plugins-the-blogger-helper/blob/main/demo_4_mobile.jpg "Ribbon style on mobile")
+![Ribbon tyles of the plugin](https://github.com/plamen9/apex-plugins-the-blogger-helper/blob/main/demo_5_mobile.jpg "Ribbon style on mobile")
 ![Ribbon and Card styles of the plugin](https://github.com/plamen9/apex-plugins-the-blogger-helper/blob/main/demo_2.jpg "Ribbon and Card styles of the plugin")
