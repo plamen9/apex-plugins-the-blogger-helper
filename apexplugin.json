@@ -1,7 +1,7 @@
 {
     "name": "The Blogger Helper",
     "version": "1.0",
-    "description": "A region type plugin which generates a link to your blog posts. Could be used as a fixed to the page ribbon on top or as a card with image, heading and description. Specify Blank with Attributes as region template for best results.",
+    "description": "A region type plugin which generates a link to your blog posts. Could be used as a fixed to the page ribbon on top or as a card with image, heading and description. Specify <b>Blank with Attributes</b> as region template for best results.",
     "keywords": ["blog", "helper", "link", "region"],
     "homepage": "https://github.com/plamen9/apex-plugins-the-blogger-helper",
     "bugs": {
