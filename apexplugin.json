@@ -1,7 +1,7 @@
 {
     "name": "The Blogger Helper",
     "version": "1.0",
-    "description": "A region type plugin which generates a nice link to a blog post (or any other website). Could be used as a fixed to the page <b>Ribbon</b> (auto collapsed on mobile) on top or as a <b>Card</b> with image, heading and description. If <b>Hashnode</b> blog post is specified, title, description and image are automatically populated. Specify <b>Blank with Attributes</b> as region template for best results.",
+    "description": "A region type plugin which generates a nice link to a blog post (or any other website). Could be used as a fixed to the page <b>Ribbon</b> (auto collapsed on mobile) on top or as a <b>Card</b> with title, description and image. If <b>Hashnode</b> blog post is specified then title, description and image are automatically populated. Specify <b>Blank with Attributes</b> as region template for best results.",
     "keywords": ["blog", "helper", "link", "region"],
     "homepage": "https://github.com/plamen9/apex-plugins-the-blogger-helper",
     "bugs": {
